@@ -1,8 +1,8 @@
 :root {
     --bg-dark: hsl(0, 0%, 0%);
     --bg-normal: hsl(0, 0%, 10%);
-    --bg-light: hsl(0, 0%, 20%);
-    --bg-glow: hsl(0, 0%, 25%);
+    --bg-light: hsl(0, 0%, 15%);
+    --bg-glow: hsl(0, 0%, 20%);
 
     --text-normal: hsl(0, 0%, 95%);
     --text-dimmed: hsl(0, 0%, 70%);
@@ -13,4 +13,5 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial;
+    font-size: 10px;
 }

@@ -1,0 +1,48 @@
+body {
+    padding: 12rem 0px;
+    background-color: var(--bg-dark);
+    color: var(--text-normal);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 1000px;
+    flex: 1;
+}
+
+.songs-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.cover {
+    width: 7rem;
+}
+
+.song-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--text-dimmed);
+    transition: all 0.15s;
+}
+
+.song-container:hover {
+    background-color: var(--bg-normal);
+    color: var(--text-normal);
+    border-radius: 10px;
+    border: 2px solid var(--highlight);
+}
+
+.song-container:active {
+    opacity: 0.8;
+}
+
+.song-info {
+    font-size: 1.5rem;
+}
