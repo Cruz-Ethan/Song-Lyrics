@@ -23,5 +23,14 @@ function renderLyrics() {
     const lyricsContainer = document.querySelector('.lyrics');
     lyricsContainer.innerHTML = `<div>
                                     Lyrics:
-                                </div>`;
+                                </div>` +
+                                song.lyrics.reduce((htmlCode, section) => 
+                                    htmlCode + `<div class='song-section'>
+                                                    <p>[${section.name}]</p>
+                                                    ${section.lyrics.reduce((htmlLyrics, line) =>
+                                                        htmlLyrics + `<p>${line}</p>`,
+                                                    '')}
+                                                </div>`,
+                                '');
+            
 }

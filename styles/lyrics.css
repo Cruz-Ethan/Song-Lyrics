@@ -3,6 +3,16 @@
 }
 
 .lyrics {
+    color: var(--text-dimmed);
     padding: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    display: block;
+}
+
+.lyrics div {
+    margin-bottom: 2rem;
+}
+
+p {
+    line-height: 2.4rem;
 }
