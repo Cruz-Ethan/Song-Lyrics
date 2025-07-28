@@ -10,7 +10,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    padding: 20px 50px;
+    padding-inline: 50px;
+    height: 10rem;
 }
 
 nav {

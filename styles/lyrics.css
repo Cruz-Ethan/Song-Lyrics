@@ -1,0 +1,8 @@
+.song-info-container {
+    background-color: var(--highlight);
+}
+
+.lyrics {
+    padding: 3rem;
+    font-size: 1.5rem;
+}
