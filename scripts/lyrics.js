@@ -4,9 +4,11 @@ import addSearchBarFunctionality from "./search-bar.js";
 addSearchBarFunctionality();
 
 const song = getSong();
+const vocals = document.querySelector('.vocals');
+const instrumental = document.querySelector('.instrumental');
 renderSongInfo();
-renderLyrics();
 addSongControlsFunctionality();
+renderLyrics();
 
 function renderSongInfo() {
     const songInfoContainer = document.querySelector('.song-info-container');
@@ -22,24 +24,21 @@ function renderSongInfo() {
 
 function renderLyrics() {
     const lyricsContainer = document.querySelector('.lyrics');
-    lyricsContainer.innerHTML = `<div>
-                                    Lyrics:
-                                </div>` +
-                                song.lyrics.reduce((htmlCode, section) => 
-                                    htmlCode + `<div class='song-section'>
-                                                    <p>[${section.name}]</p>
-                                                    ${section.lyrics.reduce((htmlLyrics, line) =>
-                                                        htmlLyrics + `<p>${line}</p>`,
-                                                    '')}
-                                                </div>`,
-                                '');
+    lyricsContainer.innerHTML = `<div class='lyrics-container'>
+                                    <div>Lyrics:</div>
+                                    ${song.lyrics.reduce((htmlCode, section) => 
+                                        htmlCode + `<div class='song-section'>
+                                                        <p>[${section.name}]</p>
+                                                        ${section.lyrics.reduce((htmlLyrics, line, index) =>
+                                                            htmlLyrics + `<p ${vocals.currentTime >= section.timestamps[index] ? "class='passed'" : ''}>${line}</p>`,
+                                                        '')}
+                                                    </div>`,
+                                    '')}
+                                </div>`;
             
 }
 
 function addSongControlsFunctionality() {
-    const vocals = document.querySelector('.vocals');
-    const instrumental = document.querySelector('.instrumental');
-
     let vocalsLoaded = false;
     let instrumentalLoaded = false;
 
@@ -62,7 +61,7 @@ function addSongControlsFunctionality() {
 
     function getTime(timeSeconds) {
         let seconds = Math.round(timeSeconds) % 60;
-        let minutes = Math.round(timeSeconds / 60);
+        let minutes = Math.floor(timeSeconds / 60);
         if(seconds < 10) {
             seconds = `0${seconds}`;
         }
@@ -80,34 +79,13 @@ function addSongControlsFunctionality() {
         const seekBar = document.querySelector('.song-time');
         seekBar.max = vocals.duration;
 
-        seekBar.addEventListener('click', () => {
-            let shouldPlayAgain = playButtonIcon.classList.contains('fa-pause')
-            if(shouldPlayAgain) {
-                playButtonIcon.classList.add('fa-play');
-                playButtonIcon.classList.remove('fa-pause');
-                vocals.pause();
-                instrumental.pause();
-                clearInterval(intervalId);
-            }
-
+        seekBar.addEventListener('input', () => {
             vocals.currentTime = seekBar.value;
             instrumental.currentTime = seekBar.value;
             currentTime.innerHTML = getTime(seekBar.value);
             const percentage = Math.round(100 * seekBar.value / seekBar.max);
             seekBar.style.background = `linear-gradient(90deg, var(--highlight) ${percentage}%, var(--text-normal) ${percentage}%)`;
-
-            if(shouldPlayAgain) {
-                playButtonIcon.classList.remove('fa-play');
-                playButtonIcon.classList.add('fa-pause');
-                vocals.play();
-                instrumental.play();
-                intervalId = setInterval(() => {
-                    seekBar.value = vocals.currentTime;
-                    currentTime.innerHTML = getTime(vocals.currentTime);
-                    const percentage = Math.round(100 * seekBar.value / seekBar.max);
-                    seekBar.style.background = `linear-gradient(90deg, var(--highlight) ${percentage}%, var(--text-normal) ${percentage}%)`;
-                }, 500);
-            }
+            renderLyrics();
         });
 
         const playButton = document.querySelector('.play-button');
@@ -125,7 +103,8 @@ function addSongControlsFunctionality() {
                     currentTime.innerHTML = getTime(vocals.currentTime);
                     const percentage = Math.round(100 * seekBar.value / seekBar.max);
                     seekBar.style.background = `linear-gradient(90deg, var(--highlight) ${percentage}%, var(--text-normal) ${percentage}%)`;
-                }, 500);
+                    renderLyrics();
+                }, 100);
             }
             else {
                 vocals.pause();

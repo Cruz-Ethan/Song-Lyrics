@@ -8,9 +8,14 @@ export const songs = [
                 name: 'Intro',
                 lyrics: [
                     'Datte boku wa hoshi dakara',
-                    'Stellar-stellar'
+                    'Stellar-stellar',
+                    'Ahhhhh'
                 ],
-                timestamps: []
+                timestamps: [
+                    0.86,
+                    8.43,
+                    13.95
+                ]
             },
             {
                 name: 'Verse 1',
@@ -24,7 +29,16 @@ export const songs = [
                     'Kowasenai kabe ga atta nda',
                     'Zutto sa'
                 ],
-                timestamps: []
+                timestamps: [
+                    26.34,
+                    27.12,
+                    29.60,
+                    32.19,
+                    35.23,
+                    37.13,
+                    40.35,
+                    44.85
+                ]
             },
             {
                 name: 'Verse 2',
@@ -38,7 +52,16 @@ export const songs = [
                     'Iranai kara',
                     'Akenaideite'
                 ],
-                timestamps: []
+                timestamps: [
+                    47.88,
+                    48.83,
+                    51.25,
+                    53.84,
+                    56.86,
+                    59.62,
+                    62.26,
+                    64.98
+                ]
             },
             {
                 name: 'Pre-Chorus',
@@ -48,7 +71,12 @@ export const songs = [
                     'Boku datte kimi to onaji',
                     'Tokubetsu nanka janai kara'
                 ],
-                timestamps: []
+                timestamps: [
+                    69.00,
+                    73.10,
+                    77.14,
+                    82.30
+                ]
             },
             {
                 name: 'Chorus',
@@ -61,7 +89,15 @@ export const songs = [
                     'Mukae ni iku oujisama da',
                     'Datte boku wa hoshi dakara',
                 ],
-                timestamps: []
+                timestamps: [
+                    91.07,
+                    94.64,
+                    97.29,
+                    101.85,
+                    105.4,
+                    110.65,
+                    115.93
+                ]
             },
             {
                 name: 'Verse 3',
@@ -76,7 +112,17 @@ export const songs = [
                     'Ashita nante',
                     'Konai mama de ite"'
                 ],
-                timestamps: []
+                timestamps: [
+                    130.14,
+                    131.02,
+                    133.39,
+                    136.07,
+                    139.21,
+                    140.97,
+                    141.82,
+                    144.55,
+                    147.18
+                ]
             },
             {
                 name: 'Pre-Chorus',
@@ -86,7 +132,7 @@ export const songs = [
                     'Hontou ni taisetsuna mono wa',
                     'Me ni mienai mitaina nda'
                 ],
-                timestamps: []
+                timestamps: [151.21, 155.33, 159.37, 165.31]
             },
             {
                 name: 'Chorus',
@@ -98,7 +144,7 @@ export const songs = [
                     'Ae kana hiroin janai sa',
                     'Sukui ni iku hiiroo da'
                 ],
-                timestamps: []
+                timestamps: [173.35, 176.79, 179.61, 184.07, 187.65, 192.90]
             },
             {
                 name: 'Bridge',
@@ -107,7 +153,7 @@ export const songs = [
                     'Otogibanashi',
                     'Otogibanashi'
                 ],
-                timestamps: []
+                timestamps: [202.26, 205.01, 210.43]
             },
             {
                 name: 'Chorus',
@@ -123,7 +169,7 @@ export const songs = [
                     'Mukae ni iku oujisama da',
                     'Datte boku wa hoshi dakara',
                 ],
-                timestamps: []
+                timestamps: [221.83, 225.38, 228.1, 232.65, 236.2, 238.86, 243.42, 247, 252.21, 257.58]
             },
             {
                 name: 'Outro',
@@ -132,7 +178,7 @@ export const songs = [
                     'Stellar-stellar',
                     'Ahh'
                 ],
-                timestamps: []
+                timestamps: [271.08, 283.5, 285.73]
             }
         ],
         link: 'https://www.youtube.com/watch?v=a51VH9BYzZA',
