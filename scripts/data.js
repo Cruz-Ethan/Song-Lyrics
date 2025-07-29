@@ -46,7 +46,7 @@ export const songs = [
                     'Futto',
                     'Kaori tatsu asa no nioi ga',
                     'Doushiyou mo naku nikurashikute',
-                    'Heya no sumi de hiza wo kakaete',
+                    'Heya no sumi de hiza o kakaete',
                     'Furueteita',
                     'Taiyou nante',
                     'Iranai kara',
@@ -81,7 +81,7 @@ export const songs = [
             {
                 name: 'Chorus',
                 lyrics: [
-                    'Sousa boku wa yoru wo utau wa stellar-stellar',
+                    'Sousa boku wa yoru o utau wa stellar-stellar',
                     'Aritakke no kagayaki de',
                     'Koyoi ongaku wa zutto zutto yamanai',
                     'Sou da boku wa zutto naritakatta no wa',
@@ -158,7 +158,7 @@ export const songs = [
             {
                 name: 'Chorus',
                 lyrics: [
-                    'Sousa boku wa yoru wo utau wa stellar-stellar',
+                    'Sousa boku wa yoru o utau wa stellar-stellar',
                     'Aritakke no kagayaki de',
                     'Koyoi ongaku wa zutto zutto yamanai',
                     'Sousa boku wa ai o utau yo stellar-stellar',
