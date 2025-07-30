@@ -188,7 +188,122 @@ export const songs = [
         title: 'Ghost',
         artist: 'Hoshimachi Suisei',
         path: 'songs/ghost',
-        lyrics: [],
+        lyrics: [
+            {
+                name: 'Verse 1',
+                lyrics: [
+                    'Patto hajiketa kanjou ni',
+                    'Iiwake wo narabete sugoshita',
+                    'Kattou mo shiranai machiakari',
+                    'Kimi dake datte uso wo tsuita'
+                ],
+                timestamps: [31.79, 36.7, 42.26, 47.28]
+            },
+            {
+                name: 'Pre-Chorus',
+                lyrics: [
+                    'Shinjitaku mo nai mama de',
+                    'Odotteiru',
+                    'Shimesu tame ni tsuranetsuzuketa',
+                    'Kotoba'
+                ],
+                timestamps: [52.22, 56.50, 59.15, 64.60]
+            },
+            {
+                name: 'Chorus',
+                lyrics: [
+                    'Mienai no boku ga',
+                    'Boku no kono koe ga kikoeteru?',
+                    'Dancer in the dark, shiruetto sura mo',
+                    'Toumei de kitto bukakkou da keredo demo',
+                    'Semete koe wo karasou',
+                    'Hisshi ni sugattemo',
+                    'Zutto shoumei wo',
+                    'Nee gousuto mitai da'
+                ],
+                timestamps: [66.21, 69.79, 75.00, 80.36, 86.50, 89.52, 92.51, 94.73]
+            },
+            {
+                name: 'Verse 2',
+                lyrics: [
+                    'Sanzan uranda akarusa to',
+                    'Imi arige ni nobite iku kage',
+                    'Tantan to sugita hito tsubu no',
+                    'Kimi no kotoba de nakitakunatta'
+                ],
+                timestamps: [108.31, 113.29, 118.90, 123.86]
+            },
+            {
+                name: 'Pre-Chorus',
+                lyrics: [
+                    'Taisetsu ni shitai mono ga',
+                    'Koborete iku',
+                    'Shimesu mama ni tsuzuri tsuzuketai',
+                    'Kotoba'
+                ],
+                timestamps: [128.77, 133.13, 135.78, 141.24]
+            },
+            {
+                name: 'Chorus',
+                lyrics: [
+                    'Mieteru no boku ga',
+                    'Boku no kono koe ga todoiteru?',
+                    'Dancer in the dark, shiruetto sura mo',
+                    'Toumei de kitto bukakkou da keredo demo',
+                    'Dakara sakende agaite',
+                    'Hadashi no mama hashitte',
+                    'Nee kizuite',
+                    'Oshiete yo kotae wa'
+                ],
+                timestamps: [142.68, 146.26, 151.254, 156.87, 163.06, 166.07, 168.99, 171.31]
+            },
+            {
+                name: 'Post-Chorus',
+                lyrics: [
+                    'Konna boku no kokoro made baka ni',
+                    'Shinaide'
+                ],
+                timestamps: [178.72, 183.99]
+            },
+            {
+                name: 'Guitar Solo',
+                lyrics: [],
+                timestamps: []
+            },
+            {
+                name: 'Bridge',
+                lyrics: [
+                    'Haiiro no machi ga waratteru',
+                    'Ashidori mo omoku naru',
+                    'Koe wo karashite sakende agaite',
+                    'Hadashi de hashiri tsuzukete',
+                    'Kawaranai you ni akiramenai you ni',
+                    'Tsurane tsuzuru dake da'
+                ],
+                timestamps: [201.31, 206.35, 210.99, 213.65, 218.31, 224.19]
+            },
+            {
+                name: 'Chorus',
+                lyrics: [
+                    'Mitsukete yo boku wo',
+                    'Boku no kono koe ga kikoeteru?',
+                    'Dancer in the dark, shiruetto sura mo',
+                    'Toumei de kitto bukakkou da keredo demo',
+                    'Semete koe wo karasou',
+                    'Hisshi ni sugattemo',
+                    'Zutto shoumei wo',
+                    'Nee gousuto mitai da'
+                ],
+                timestamps: [229.65, 233.34, 238.63, 243.89, 250.13, 253.10, 256.04, 258.37]
+            },
+            {
+                name: 'Outro',
+                lyrics: [
+                    'Ah'
+                ],
+                timestamps: [265.91]
+            }
+        ],
         link: 'https://www.youtube.com/watch?v=IKKar5SS29E',
         id: '44sRFs-XHQtR0-x56VCZ'
     }

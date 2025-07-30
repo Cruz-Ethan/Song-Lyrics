@@ -69,7 +69,7 @@ function addSongControlsFunctionality() {
 
 function getTime(timeSeconds) {
     let seconds = Math.round(timeSeconds) % 60;
-    let minutes = Math.floor(timeSeconds / 60);
+    let minutes = Math.floor(Math.round(timeSeconds) / 60);
     if(seconds < 10) {
         seconds = `0${seconds}`;
     }
@@ -77,15 +77,16 @@ function getTime(timeSeconds) {
 }
 
 function renderControls() {
-    renderTitle();
+    renderTitleAndCover();
     addButtonFunctionality();
     addPlayButtonFunctionality();
     renderSeekBar();
     addSeekBarFunctionality();
 }
 
-function renderTitle() {
+function renderTitleAndCover() {
     document.querySelector('.song-title-2').innerHTML = song.title;
+    document.querySelector('.mini-cover').src = song.path + '/cover.jpg'
 }
 
 function addButtonFunctionality() {
@@ -104,7 +105,7 @@ function addPlayButtonFunctionality() {
 
         if(playButtonIcon.classList.contains('fa-pause')) {
             playSong();
-            intervalId = setInterval(updateSeekBar, 100);
+            intervalId = setInterval(updateSeekBar, 50);
         }
         else {
             pauseSong();

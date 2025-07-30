@@ -19,6 +19,12 @@
     font-size: clamp(2rem, 3vw, 3.5rem);
 }
 
+.mini-cover {
+    width: clamp(10rem, 15vw, 18rem);
+    border-radius: 50%;
+    border: clamp(0.5rem, 1vw, 1rem) solid var(--highlight);
+}
+
 .toggle-vocals {
     background-color: var(--highlight);
     color: white;
@@ -45,6 +51,7 @@
     border: none;
     width: clamp(3.5rem, 4.5vw, 5rem);
     height: clamp(3.5rem, 4.5vw, 5rem);
+    font-size: clamp(1.4rem, 1.7vw, 2.2rem);
     border-radius: 50%;
     outline: transparent;
     transition: opacity 0.15s;
